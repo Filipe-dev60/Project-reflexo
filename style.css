@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#000;
+    min-height:90vh;
+}
+.container{
+    max-width:1000px;
+    display:flex;
+    justify-content:center;
+}
+.container img{
+    width:400px;
+    transform-origin:center;
+    transform:perspective(800px) rotateY(35deg);
+    transition:all 0.2s linear;
+    -webkit-box-reflect:below 1px linear-gradient(transparent,transparent,#000);
+}
+.container:hover img{
+    opacity:0.2;
+}
+.container img:hover{
+    opacity:1;
+    transform:perspective(800px) rotateY(0deg);
+}
